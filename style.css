@@ -1,10 +1,13 @@
 /* Variable Declaration */
 :root{
     --white: #fff;
+    --black: #000;
     --orange: #FFAD5A;
     --grapefruit: #FF5959;
     --blacklacquer : #3E3E3E;
     --carbon: #333333;
+    --grimreaper: #13103A;
+
 }
 
 
@@ -24,6 +27,8 @@ section{
 
 
 
+
+
 .container {
     width: 1128px;
 }
@@ -34,14 +39,31 @@ section{
     justify-content: space-between;
 }
 
+.vertical-item-one{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .vertical-item-two{
     width: 520px;
+}
+
+.vertical-item-three{
 }
 
 .vertical-item-right{
     display: flex;
     align-items: center;
     justify-content: flex-end;
+}
+
+.section-header{
+    color: var(--grimreaper) ;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 70px;
 }
 
 .text-orange{
@@ -60,6 +82,31 @@ section{
 
 .button-container{
     display: flex;
+}
+
+.card{
+    margin: 0 12px;
+    border-radius: 26px;
+    padding: 25px 32px;
+}
+
+.card:first-child{
+    margin-left: 0;
+}
+
+.card:last-child{
+    margin-right: 0;
+}
+
+.card img{
+    width: 141px;
+}
+
+.card .card-title{
+    color: var(--black);
+    font-weight: 600;
+    font-size: 24px;
+    margin: 12px 0 16px;
 }
 
 /* Main Header Container */
@@ -107,4 +154,21 @@ section{
 
 .heading-image-wrapper img{
     width: 385px;
+}
+
+
+/* My Mission Section */
+#mission .vertical-item-one{
+    margin-bottom: 48px;
+}
+.card.mission-card-first{
+    background-color: rgba(79, 157, 166, 0.1);
+}
+
+.card.mission-card-second{
+    background-color: rgba(255, 89, 89, 0.1);
+}
+
+.card.mission-card-third{
+    background-color: #FFF4D6;
 }

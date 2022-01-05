@@ -1,5 +1,6 @@
 /* Variable Declaration */
 :root{
+    --white: #fff;
     --orange: #FFAD5A;
     --grapefruit: #FF5959;
     --blacklacquer : #3E3E3E;
@@ -47,6 +48,20 @@ section{
      color: var(--orange);
 }
 
+.red-button{
+    background-color: var(--grapefruit);
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--white);
+    padding: 12px 37.5px;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.button-container{
+    display: flex;
+}
+
 /* Main Header Container */
 #main-header{
     padding: 80px 0 60px;
@@ -69,6 +84,14 @@ section{
     color: var(--blacklacquer);
     font-size: 18px;
     line-height: 28px;
+}
+
+.heading-content-wrapper .heading-btn{
+    margin-top: 31px;
+}
+
+.heading-content-wrapper .explore-more{
+    margin-top: 33px;
 }
 
 .heading-content-wrapper .left-bar{

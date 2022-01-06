@@ -267,6 +267,7 @@ section{
     width: 100%;
     padding: 20px;
     margin: 10px 0;
+    border: 1px solid var(--carbon);
 }
 
 #contact form input::placeholder,

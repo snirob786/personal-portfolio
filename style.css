@@ -1,5 +1,6 @@
 /* Variable Declaration */
 :root{
+    /*colors*/
     --white: #fff;
     --black: #000;
     --orange: #FFAD5A;
@@ -7,6 +8,12 @@
     --blacklacquer : #3E3E3E;
     --carbon: #333333;
     --grimreaper: #13103A;
+
+    /* Fonts*/
+    --poppins:'Poppins', sans-serif;
+    --yeseva-one:'Yeseva One', cursive;
+    --lobster: 'Lobster', cursive;
+    --monrope: 'Manrope', sans-serif;
 
 }
 
@@ -16,7 +23,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--poppins);
 }
 
 section{
@@ -24,10 +31,6 @@ section{
     align-items: center;
     justify-content: center;
 }
-
-
-
-
 
 .container {
     width: 1128px;
@@ -51,12 +54,21 @@ section{
 }
 
 .vertical-item-three{
+    width: 100%;
 }
 
 .vertical-item-right{
     display: flex;
     align-items: center;
     justify-content: flex-end;
+}
+
+.width-40{
+    width: 40%;
+}
+
+.width-60{
+    width: 60%;
 }
 
 .section-header{
@@ -66,8 +78,20 @@ section{
     line-height: 70px;
 }
 
+.section-title{
+    color: var(--carbon);
+    font-size: 36px;
+    font-weight: 800;
+}
+
 .text-orange{
      color: var(--orange);
+}
+
+.content{
+    font-size: 18px;
+    line-height: 30px;
+    color: var(--blacklacquer);
 }
 
 .red-button{
@@ -109,6 +133,23 @@ section{
     margin: 12px 0 16px;
 }
 
+.image-wrapper{
+    position: relative;
+}
+
+.image-wrapper img{
+    width: 400px;
+}
+
+.content-wrapper .content{
+    margin-top: 17px;
+}
+
+.content-wrapper .button-container .red-button{
+    margin-top: 18px;
+    padding: 14px 31px;
+}
+
 /* Main Header Container */
 #main-header{
     padding: 80px 0 60px;
@@ -120,7 +161,7 @@ section{
 }
 
 .heading-content-wrapper .heading{
-    font-family: 'Yeseva One', cursive;
+    font-family: var(--yeseva-one);
     font-size: 60px;
     line-height: 80px;
     color: var(--carbon);
@@ -153,14 +194,23 @@ section{
 }
 
 .heading-image-wrapper img{
-    width: 385px;
+    width: 500px;
 }
 
 
 /* My Mission Section */
+#mission{
+    margin-bottom: 85px;
+}
+
 #mission .vertical-item-one{
     margin-bottom: 48px;
 }
+
+.mission-card{
+    height: 428px;
+}
+
 .card.mission-card-first{
     background-color: rgba(79, 157, 166, 0.1);
 }
@@ -171,4 +221,107 @@ section{
 
 .card.mission-card-third{
     background-color: #FFF4D6;
+}
+
+/* Develop Without Limit */
+#develop-limitless{
+    margin-bottom: 105px;
+    position: relative;
+}
+
+#develop-limitless .image-wrapper .left-circle{
+    position: absolute;
+    left: -90px;
+    top: 50px;
+    z-index: -1;
+}
+#develop-limitless .image-wrapper .left-circle .shape-1{
+    width: 227px;
+}
+
+#develop-limitless .dots-container{
+    position: absolute;
+    left: 210px;
+    bottom: -100px;
+}
+#develop-limitless .dots-container .dots{
+    width: 150px;
+}
+
+/* Global Community */
+#global-community{
+    margin-bottom: 85px;
+}
+
+/* Contact */
+#contact{
+    margin-bottom: 85px;
+}
+
+#contact .section-title{
+    margin-bottom: 17px;
+}
+
+#contact form input,
+#contact form textarea{
+    width: 100%;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+#contact form input::placeholder,
+#contact form textarea::placeholder{
+    font-size: 18px;
+}
+
+#contact form input:focus-visible,
+#contact form textarea:focus-visible{
+    outline-color: var(--grapefruit);
+}
+
+#contact form input:first-child{
+    margin-top: 0;
+}
+
+#contact form input:last-child{
+    margin-bottom: 0;
+}
+
+#contact form input{
+   height: 60px;
+}
+
+#contact .button-container .red-button{
+    border: none;
+}
+
+/* Footer */
+#footer{
+    background-color: var(--black);
+    padding: 39px 0 46px;
+}
+
+#footer h2{
+    font-family: var(--lobster);
+    color: var(--white);
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: 0.5px;
+}
+
+#footer h2 .red-text{
+    color: var(--grapefruit);
+}
+
+#footer .copyright{
+    color: var(--white);
+    font-family: var(--monrope);
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 24px;
+}
+
+#footer .copyright a{
+    text-decoration: none;
+    color: var(--white);
 }

@@ -13,7 +13,7 @@ export const personalData = {
   twitter: "", //"https://twitter.com/said7388",
   stackOverflow: "https://stackoverflow.com/users/10182184/saifur-rahman-nirob",
   leetcode: "", //"https://leetcode.com/said3812/",
-  devUsername: "said7388",
+  devUsername: "", //said7388
   resume:
     "https://drive.google.com/file/d/1YmT7KSmPS4IVbyWif1Ybct8vJXueCaxU/view?usp=sharing",
 };

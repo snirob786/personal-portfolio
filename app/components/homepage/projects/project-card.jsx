@@ -1,9 +1,11 @@
 // @flow strict
 
-import * as React from 'react';
+import Link from "next/link";
+import * as React from "react";
+import { MdOutlineLink } from "react-icons/md";
 
 function ProjectCard({ project }) {
-
+  console.log("🚀 ~ ProjectCard ~ project:", project);
   return (
     <div className="from-[#0d1224] border-[#1b2c68a0] relative rounded-lg border bg-gradient-to-r to-[#0a0d37] w-full">
       <div className="flex flex-row">
@@ -26,7 +28,7 @@ function ProjectCard({ project }) {
             <span className="mr-2 text-pink-500">const</span>
             <span className="mr-2 text-white">project</span>
             <span className="mr-2 text-pink-500">=</span>
-            <span className="text-gray-400">{'{'}</span>
+            <span className="text-gray-400">{"{"}</span>
           </div>
           <div>
             <span className="ml-4 lg:ml-8 mr-2 text-white">name:</span>
@@ -38,17 +40,14 @@ function ProjectCard({ project }) {
           <div className="ml-4 lg:ml-8 mr-2">
             <span className=" text-white">tools:</span>
             <span className="text-gray-400">{` ['`}</span>
-            {
-              project.tools.map((tag, i) => (
-                <React.Fragment key={i}>
-                  <span className="text-amber-300">{tag}</span>
-                  {
-                    project.tools?.length - 1 !== i &&
-                    <span className="text-gray-400">{`', '`}</span>
-                  }
-                </React.Fragment>
-              ))
-            }
+            {project.tools.map((tag, i) => (
+              <React.Fragment key={i}>
+                <span className="text-amber-300">{tag}</span>
+                {project.tools?.length - 1 !== i && (
+                  <span className="text-gray-400">{`', '`}</span>
+                )}
+              </React.Fragment>
+            ))}
             <span className="text-gray-400">{"],"}</span>
           </div>
           <div>
@@ -58,14 +57,31 @@ function ProjectCard({ project }) {
           </div>
           <div className="ml-4 lg:ml-8 mr-2">
             <span className="text-white">Description:</span>
-            <span className="text-cyan-400">{' ' + project.description}</span>
+            <span className="text-cyan-400">{" " + project.description}</span>
             <span className="text-gray-400">,</span>
           </div>
-          <div><span className="text-gray-400">{`};`}</span></div>
+          <div>
+            <span className="text-gray-400">{`};`}</span>
+          </div>
         </code>
+        {project.url && (
+          <div className="flex items-center justify-end">
+            <div className="w-max">
+              <Link
+                className="flex items-center gap-1 hover:gap-3 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 px-3 md:px-8 py-3 md:py-4 text-center text-xs font-normal uppercase tracking-wider text-white no-underline transition-all duration-200 ease-out hover:text-white hover:no-underline md:font-medium"
+                role="button"
+                target="_blank"
+                href={project.url}
+              >
+                <span>View Live</span>
+                <MdOutlineLink size={16} />
+              </Link>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
-};
+}
 
 export default ProjectCard;
